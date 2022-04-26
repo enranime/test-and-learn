@@ -37,7 +37,6 @@ function findFrequent(arr) {
 function mostFrequent(arr)
 {
  
-    const startTime = performance.now()
     // declare n equal to length array
     const n = arr.length;
     // Insert all elements in hash.
@@ -56,7 +55,7 @@ function mostFrequent(arr)
     // find the max frequency
     let count = 0, no = -1; 
 
-    hash.forEach((value,key) => {
+    hash.forEach((value,key) => { //loop through hashmap to find max value
         if (count < value) {
             no = key;
             count = value;
@@ -64,10 +63,7 @@ function mostFrequent(arr)
  
     });
 
-    
-    const endTime = performance.now()
-    console.log(`function took ${endTime - startTime} milliseconds`)
-    return console.log(`most Count = ${count} and number is = ${no}`);
+    return console.log(`no:${no},count:${count}`);
 }
  
 let n = 100000;
